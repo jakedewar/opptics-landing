@@ -1,4 +1,20 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/webhook/route": "app/api/auth/webhook/route.js",
+  "/api/payments/create-checkout-session/route": "app/api/payments/create-checkout-session/route.js",
+  "/api/payments/webhook/route": "app/api/payments/webhook/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js"
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
+  "/(auth)/sign-in/[[...sign-in]]/page": "app/(auth)/sign-in/[[...sign-in]]/page.js",
+  "/(auth)/sign-up/[[...sign-up]]/page": "app/(auth)/sign-up/[[...sign-up]]/page.js",
+  "/cancel/page": "app/cancel/page.js",
+  "/(auth)/user-profile/[[...user-profile]]/page": "app/(auth)/user-profile/[[...user-profile]]/page.js",
+  "/page": "app/page.js",
+  "/success/page": "app/success/page.js",
+  "/(marketing)/marketing-page/page": "app/(marketing)/marketing-page/page.js",
+  "/dashboard/finance/page": "app/dashboard/finance/page.js",
+  "/dashboard/page": "app/dashboard/page.js",
+  "/dashboard/projects/page": "app/dashboard/projects/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js"
 }
