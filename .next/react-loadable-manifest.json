@@ -1,22 +1,26 @@
 {
   "node_modules/@clerk/nextjs/dist/esm/app-router/client/ClerkProvider.js -> ./keyless-creator-reader.js": {
-    "id": 60809,
+    "id": "node_modules/@clerk/nextjs/dist/esm/app-router/client/ClerkProvider.js -> ./keyless-creator-reader.js",
     "files": [
-      "static/chunks/809.0332a2e07adda0f5.js"
+      "static/chunks/_app-pages-browser_node_modules_clerk_nextjs_dist_esm_app-router_client_keyless-creator-reader_js.js"
     ]
   },
   "node_modules/@clerk/nextjs/dist/esm/app-router/client/keyless-cookie-sync.js -> ../keyless-actions.js": {
-    "id": 80066,
+    "id": "node_modules/@clerk/nextjs/dist/esm/app-router/client/keyless-cookie-sync.js -> ../keyless-actions.js",
     "files": [
-      "static/chunks/66.c793292188f4de67.js"
+      "static/chunks/_app-pages-browser_node_modules_clerk_nextjs_dist_esm_app-router_keyless-actions_js.js"
     ]
   },
-  "node_modules/@tanstack/query-devtools/build/index.js -> ./DevtoolsComponent/HO4MOOFI.js": {
-    "id": null,
-    "files": []
+  "node_modules/@tanstack/query-devtools/build/dev.js -> ./DevtoolsComponent/E3YREIG7.js": {
+    "id": "node_modules/@tanstack/query-devtools/build/dev.js -> ./DevtoolsComponent/E3YREIG7.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_tanstack_query-devtools_build_DevtoolsComponent_E3YREIG7_js.js"
+    ]
   },
-  "node_modules/@tanstack/query-devtools/build/index.js -> ./DevtoolsPanelComponent/HUY7CZI3.js": {
-    "id": null,
-    "files": []
+  "node_modules/@tanstack/query-devtools/build/dev.js -> ./DevtoolsPanelComponent/LFXA4CB4.js": {
+    "id": "node_modules/@tanstack/query-devtools/build/dev.js -> ./DevtoolsPanelComponent/LFXA4CB4.js",
+    "files": [
+      "static/chunks/_app-pages-browser_node_modules_tanstack_query-devtools_build_DevtoolsPanelComponent_LFXA4CB4_js.js"
+    ]
   }
 }

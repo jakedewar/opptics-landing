@@ -29,17 +29,19 @@ declare namespace __next_route_internal_types__ {
     S extends `${string}${SearchOrHash}` ? never : S
 
   type StaticRoutes = 
-    | `/api/auth/webhook`
-    | `/api/payments/create-checkout-session`
-    | `/api/payments/webhook`
-    | `/cancel`
     | `/`
-    | `/success`
     | `/marketing-page`
-    | `/dashboard/finance`
+    | `/api/auth/webhook`
+    | `/api/payments/webhook`
+    | `/api/payments/create-checkout-session`
+    | `/cancel`
     | `/dashboard`
+    | `/dashboard/finance`
     | `/dashboard/projects`
     | `/dashboard/settings`
+    | `/privacy`
+    | `/success`
+    | `/terms`
   type DynamicRoutes<T extends string = string> = 
     | `/sign-in/${OptionalCatchAllSlug<T>}`
     | `/sign-up/${OptionalCatchAllSlug<T>}`

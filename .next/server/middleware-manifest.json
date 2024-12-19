@@ -17,11 +17,8 @@
       "wasm": [],
       "assets": [],
       "env": {
-        "__NEXT_BUILD_ID": "bX2Ufznc8MMqiEJUfTgz5",
-        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "aXcfOt9hRDcCZkU43iGJhdzJzLXzycfHBzocBhiZBNw=",
-        "__NEXT_PREVIEW_MODE_ID": "1b8d110b46de694eb2ea286ee9482b49",
-        "__NEXT_PREVIEW_MODE_ENCRYPTION_KEY": "a28a955535cbe6605655962005c713518e8892d635abc6ff9ee29039e491f9dc",
-        "__NEXT_PREVIEW_MODE_SIGNING_KEY": "42ee800dc10ac43585150c0d7f6c9db689e0ea2f22fa043a1e84ee060643c9d2"
+        "__NEXT_BUILD_ID": "development",
+        "NEXT_SERVER_ACTIONS_ENCRYPTION_KEY": "aXcfOt9hRDcCZkU43iGJhdzJzLXzycfHBzocBhiZBNw="
       }
     }
   },
