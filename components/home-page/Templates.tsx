@@ -5,50 +5,40 @@ interface Template {
     original: string;
     replacement: string;
   }>;
-  aiFeatures: string;
-  industryContext: string;
+  features: string;
+  context: string;
 }
 
 const templates: Template[] = [
   {
     icon: "🏥",
-    title: "Healthcare",
+    title: "Wellness",
     examples: [
-      { original: "User records", replacement: "Patient data" },
-      { original: "Task assignment", replacement: "Care coordination" }
+      { original: "Users", replacement: "Members" },
+      { original: "Sessions", replacement: "Classes" }
     ],
-    aiFeatures: "Medical terminology mapping",
-    industryContext: "Understands healthcare workflows and terminology"
+    features: "Industry-specific terminology",
+    context: "Pre-configured for wellness industry workflows"
   },
   {
-    icon: "💰",
-    title: "Financial Services",
+    icon: "✨",
+    title: "Custom",
     examples: [
-      { original: "Customer accounts", replacement: "Investment portfolios" },
-      { original: "Payment processing", replacement: "Transaction settlement" }
+      { original: "Your terms", replacement: "Their terms" },
+      { original: "Any word", replacement: "Perfect match" }
     ],
-    aiFeatures: "Financial terminology detection",
-    industryContext: "Adapts to banking and investment terminology"
+    features: "Fully customizable",
+    context: "Create your own custom terminology mappings"
   },
   {
-    icon: "🏗️",
-    title: "Construction",
+    icon: "🏃",
+    title: "Athletic",
     examples: [
-      { original: "Project timeline", replacement: "Build schedule" },
-      { original: "Resource allocation", replacement: "Site management" }
+      { original: "Schedule", replacement: "Training plan" },
+      { original: "Progress", replacement: "Performance tracking" }
     ],
-    aiFeatures: "Construction terminology",
-    industryContext: "Understands construction workflows and processes"
-  },
-  {
-    icon: "📱",
-    title: "Technology",
-    examples: [
-      { original: "System integration", replacement: "API ecosystem" },
-      { original: "User permissions", replacement: "Role-based access" }
-    ],
-    aiFeatures: "Tech stack terminology",
-    industryContext: "Identifies and adapts to technical environments"
+    features: "Industry-specific terminology",
+    context: "Pre-configured for athletic industry workflows"
   }
 ];
 
@@ -58,14 +48,17 @@ export default function Templates() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 bg-clip-text text-transparent mb-4">
-            Industry-Aware AI
+            Industry Templates
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Beyond simple word replacement - our AI understands industry context and compliance requirements
+            Pre-configured terminology mappings for your industry
+            <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
+              AI Suggestions Coming Soon
+            </span>
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {templates.map((template, index) => (
             <div
               key={index}
@@ -96,10 +89,10 @@ export default function Templates() {
                     <svg className="w-4 h-4 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                     </svg>
-                    <span>{template.aiFeatures}</span>
+                    <span>{template.features}</span>
                   </div>
                   <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
-                    {template.industryContext}
+                    {template.context}
                   </p>
                 </div>
               </div>

@@ -8,55 +8,62 @@ interface PricingTier {
   description: string;
   features: string[];
   featured: boolean;
+  limit?: string;
 }
 
 const tiers: PricingTier[] = [
   {
-    name: 'Starter',
-    id: 'tier-starter',
+    name: 'Free',
+    id: 'tier-free',
     href: '#',
     priceMonthly: '$0',
-    description: 'Get started in 5 minutes',
+    description: 'Try Opptics risk-free',
     features: [
-      '3 industry templates',
+      '1 sales rep seat',
       'Basic AI suggestions',
-      'Up to 10 custom mappings',
-      'Perfect for solo sellers',
+      '3 industry templates',
+      '5 custom mappings',
+      '7-day history',
       'Community support'
     ],
     featured: false,
+    limit: 'Free forever'
   },
   {
-    name: 'Growth',
-    id: 'tier-growth',
+    name: 'Pro',
+    id: 'tier-pro',
     href: '#',
-    priceMonthly: '$29',
-    description: 'Close more deals, faster',
+    priceMonthly: '$39',
+    description: 'For serious sales professionals',
     features: [
-      'All industry templates',
+      '1 sales rep seat',
       'Advanced AI suggestions',
+      'All industry templates',
       'Unlimited mappings',
-      'Meeting recordings',
+      'Unlimited history',
       'Priority support',
-      'Team sharing (up to 3)'
+      'Meeting recordings'
     ],
     featured: true,
+    limit: 'Single rep license'
   },
   {
-    name: 'Scale',
-    id: 'tier-scale',
+    name: 'Team',
+    id: 'tier-team',
     href: '#',
-    priceMonthly: '$79',
-    description: 'For growing sales teams',
+    priceMonthly: '$29',
+    description: 'Perfect for small sales teams',
     features: [
-      'Everything in Growth',
-      'Unlimited team sharing',
-      'Custom AI training',
-      'Advanced analytics',
-      'API access',
-      'Dedicated support'
+      '3+ sales rep seats',
+      'Everything in Pro',
+      'Team sharing & collaboration',
+      'Admin dashboard',
+      'Usage analytics',
+      'Dedicated support',
+      'Training session'
     ],
     featured: false,
+    limit: 'Per seat/month, 3 seat minimum'
   },
 ];
 
@@ -95,8 +102,15 @@ export default function Pricing() {
               </div>
 
               <div className="mb-8">
-                <span className="text-4xl font-bold text-gray-900 dark:text-white">{tier.priceMonthly}</span>
-                <span className="text-gray-500 dark:text-gray-400">/month</span>
+                <span className="text-2xl font-bold text-gray-900 dark:text-white">{tier.priceMonthly}</span>
+                {tier.priceMonthly !== '$0' && (
+                  <span className="text-gray-500 dark:text-gray-400">/month</span>
+                )}
+                {tier.limit && (
+                  <div className="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    {tier.limit}
+                  </div>
+                )}
               </div>
 
               <ul className="space-y-4 mb-8 flex-grow">
@@ -109,19 +123,21 @@ export default function Pricing() {
               </ul>
 
               <a
-                href={tier.featured 
-                  ? "/signup"
-                  : tier.name === 'Scale' ? "/contact" : "/signup"}
+                href={tier.name === 'Team' ? "/contact" : "/signup"}
                 className={`inline-flex justify-center rounded-lg px-4 py-3 text-sm font-semibold transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 ${
                   tier.featured
                     ? 'bg-gradient-to-r from-indigo-600 to-indigo-500 text-white hover:opacity-90 focus-visible:outline-indigo-600'
                     : 'bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800'
                 }`}
               >
-                {tier.name === 'Scale' ? "Contact Sales" : "Get Started"}
+                {tier.name === 'Team' ? "Contact Sales" : "Get Started"}
               </a>
             </div>
           ))}
+        </div>
+
+        <div className="text-center mt-8 text-sm text-gray-500 dark:text-gray-400">
+          Need more than 10 seats? Contact us for enterprise pricing.
         </div>
       </div>
     </section>

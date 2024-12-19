@@ -28,9 +28,6 @@ export default function Home() {
         <div className="w-full bg-alternate">
           <ComparisonTable />
         </div>
-        <div className="w-full bg-alternate">
-          <Pricing />
-        </div>
       </div>
     </PageWrapper>
   );

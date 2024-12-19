@@ -12,7 +12,8 @@ export default function ComparisonTable() {
         </div>
 
         <div className="max-w-5xl mx-auto bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-200 dark:border-gray-700">
-          <div className="grid grid-cols-4 gap-4 p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 rounded-t-2xl">
+          {/* Header - Hidden on mobile */}
+          <div className="hidden md:grid md:grid-cols-4 gap-4 p-6 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 rounded-t-2xl">
             <div className="col-span-1"></div>
             <div className="col-span-1 text-center">
               <div className="font-semibold text-gray-500 dark:text-gray-400">Basic Tools</div>
@@ -22,6 +23,19 @@ export default function ComparisonTable() {
             </div>
             <div className="col-span-1 text-center">
               <div className="font-semibold text-indigo-600 dark:text-indigo-400">Opptics</div>
+            </div>
+          </div>
+
+          {/* Mobile Header */}
+          <div className="md:hidden grid grid-cols-3 gap-2 p-4 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900 rounded-t-2xl">
+            <div className="text-center">
+              <div className="font-semibold text-gray-500 dark:text-gray-400 text-sm">Basic Tools</div>
+            </div>
+            <div className="text-center">
+              <div className="font-semibold text-gray-500 dark:text-gray-400 italic text-sm">Others...</div>
+            </div>
+            <div className="text-center">
+              <div className="font-semibold text-indigo-600 dark:text-indigo-400 text-sm">Opptics</div>
             </div>
           </div>
 
@@ -40,10 +54,10 @@ export default function ComparisonTable() {
                 opptics: "Zero platform changes"
               },
               {
-                feature: "AI Capabilities",
-                basic: "None",
-                competitors: "Basic automation",
-                opptics: "Full context analysis"
+                feature: "Customization",
+                basic: "Limited options",
+                competitors: "Complex rules",
+                opptics: "Simple mappings"
               },
               {
                 feature: "User Control",
@@ -64,11 +78,24 @@ export default function ComparisonTable() {
                 opptics: "Minutes"
               }
             ].map((row, index) => (
-              <div key={index} className="grid grid-cols-4 gap-4 p-6">
-                <div className="col-span-1 font-medium">{row.feature}</div>
-                <div className="col-span-1 text-center text-gray-600 dark:text-gray-300">{row.basic}</div>
-                <div className="col-span-1 text-center text-gray-600 dark:text-gray-300">{row.competitors}</div>
-                <div className="col-span-1 text-center text-indigo-600 dark:text-indigo-400 font-medium">{row.opptics}</div>
+              <div key={index}>
+                {/* Mobile Layout */}
+                <div className="md:hidden p-4">
+                  <div className="font-medium text-base mb-3">{row.feature}</div>
+                  <div className="grid grid-cols-3 gap-2">
+                    <div className="text-center text-gray-600 dark:text-gray-300 text-sm">{row.basic}</div>
+                    <div className="text-center text-gray-600 dark:text-gray-300 text-sm">{row.competitors}</div>
+                    <div className="text-center text-indigo-600 dark:text-indigo-400 font-medium text-sm">{row.opptics}</div>
+                  </div>
+                </div>
+
+                {/* Desktop Layout */}
+                <div className="hidden md:grid md:grid-cols-4 gap-4 p-6">
+                  <div className="col-span-1 font-medium">{row.feature}</div>
+                  <div className="col-span-1 text-center text-gray-600 dark:text-gray-300">{row.basic}</div>
+                  <div className="col-span-1 text-center text-gray-600 dark:text-gray-300">{row.competitors}</div>
+                  <div className="col-span-1 text-center text-indigo-600 dark:text-indigo-400 font-medium">{row.opptics}</div>
+                </div>
               </div>
             ))}
           </div>

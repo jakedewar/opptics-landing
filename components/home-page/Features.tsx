@@ -16,12 +16,12 @@ const features: Feature[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'Instant AI Analysis',
-    description: "Our AI instantly analyzes both your demo environment and prospect's content to suggest perfect terminology mappings in real-time.",
+    title: 'Instant Personalization',
+    description: "Create and apply custom terminology mappings in real-time to perfectly match your prospect's industry and preferences.",
     benefits: [
-      'Zero setup or configuration needed',
-      'Immediate contextual suggestions',
-      'Industry-aware recommendations'
+      'Zero setup needed',
+      'Instant changes',
+      'Custom mappings'
     ]
   },
   {
@@ -44,11 +44,11 @@ const features: Feature[] = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 14v3m4-3v3m4-3v3M3 21h18M3 10h18M3 7l9-4 9 4M4 10h16v11H4V10z" />
       </svg>
     ),
-    title: 'Human-in-the-Loop Control',
-    description: 'Full control over AI suggestions with easy review, edit, and approval workflow. Your demos stay on-brand and accurate.',
+    title: 'Full Manual Control',
+    description: 'Complete control over your terminology mappings with easy review and edit workflow. Your demos stay on-brand and accurate.',
     benefits: [
       'Review before applying',
-      'Edit suggestions instantly',
+      'Edit instantly',
       'Save custom mappings'
     ]
   },
@@ -152,14 +152,17 @@ export default function Features() {
   }, []);
 
   return (
-    <section className="py-24 md:py-32">
+    <section id="features" className="py-24 md:py-32 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 bg-clip-text text-transparent mb-4">
-            AI-Powered Demo Excellence
+            Demo Excellence
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Intelligent personalization that understands your prospect's context
+            Smart personalization for your product demos
+            <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
+              AI Features Coming Soon
+            </span>
           </p>
         </div>
 

@@ -14,7 +14,7 @@ interface Testimonial {
 export default function Testimonials() {
   const testimonials: Testimonial[] = [
     {
-      quote: "We switched from basic tools because Opptics' AI actually understands industry context. It doesn't just swap words - it provides real-time insights about regulatory compliance and industry trends.",
+      quote: "The instant personalization completely transformed our demos. What used to take hours of preparation now happens in seconds with just a few clicks.",
       author: "Sarah Chen",
       role: "VP of Sales",
       company: "TechScale Solutions",
@@ -32,7 +32,7 @@ export default function Testimonials() {
       previousTool: "Complex demo platforms"
     },
     {
-      quote: "The AI-powered personalization is incredible. Opptics learns from successful demos across our team and automatically suggests the most effective terminology for each prospect's industry.",
+      quote: "The customization options are perfect for our needs. Being able to save and reuse terminology mappings across demos has been a huge time-saver.",
       author: "Rachel Kim",
       role: "Sales Engineering Lead",
       company: "CloudSecure",

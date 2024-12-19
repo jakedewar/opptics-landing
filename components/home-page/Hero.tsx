@@ -19,20 +19,23 @@ export default function Hero() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <div className="space-y-6 lg:space-y-8 text-center lg:text-left">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 bg-clip-text text-transparent">
-                AI-Powered Demo<br />Personalization
+                Smart Demo<br />Personalization
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                Our AI analyzes your prospect's website and content to auto-generate perfect terminology mappings. No code changes, no complex setup - just install our extension and start closing more deals.
+                Instantly customize your product demos with perfect terminology for each prospect. No code changes, no complex setup - just install our extension and start closing more deals.
               </p>
               <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
                 <Link 
-                  href="#"
+                  href="https://chrome.google.com/webstore"
+                  target="_blank"
                   className="inline-flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-500 text-white px-6 py-3 rounded-lg font-medium hover:opacity-90 transition-all duration-200 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40"
                 >
-                  Sign Up Free
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
                   </svg>
+                  Download Extension
                 </Link>
                 <button 
                   onClick={() => setShowVideo(true)}
@@ -49,10 +52,10 @@ export default function Hero() {
               {/* Added: Quick Benefits List */}
               <div className="grid grid-cols-2 gap-4 pt-4">
                 {[
-                  { icon: "🤖", text: "AI-Powered Mapping" },
-                  { icon: "⚡", text: "Zero Code Changes" },
-                  { icon: "🎯", text: "Works Everywhere" },
-                  { icon: "🔒", text: "Full AE Control" }
+                  { icon: "⚡", text: "Instant Setup" },
+                  { icon: "🎯", text: "Zero Code Changes" },
+                  { icon: "🔄", text: "Works Everywhere" },
+                  { icon: "🔒", text: "Full Control" }
                 ].map((benefit, index) => (
                   <div key={index} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-300">
                     <span>{benefit.icon}</span>
@@ -83,7 +86,7 @@ export default function Hero() {
                             <path d="M3 10v4a5 5 0 0 0 5 5h4v-7h4v7h4a5 5 0 0 0 5-5v-4H3z" />
                           </svg>
                         </div>
-                        <span className="ml-2 text-sm text-indigo-600 dark:text-indigo-400">AI Analysis Active</span>
+                        <span className="ml-2 text-sm text-indigo-600 dark:text-indigo-400">app.acme.com/dashboard</span>
                       </div>
                     </div>
                   </div>
@@ -150,12 +153,12 @@ export default function Hero() {
               <div className="text-sm text-gray-600 dark:text-gray-300 text-center">Faster Sales Cycles</div>
             </div>
             <div className="flex flex-col items-center gap-2 px-4 py-3 rounded-xl bg-white/90 dark:bg-gray-800/90 border border-gray-200 dark:border-gray-700 shadow-lg backdrop-blur-sm transition duration-300 hover:shadow-xl hover:-translate-y-0.5">
-              <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">1000+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-300 text-center">Active Users</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">100%</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 text-center">Free to Start</div>
             </div>
             <div className="flex flex-col items-center gap-2 px-4 py-3 rounded-xl bg-white/90 dark:bg-gray-800/90 border border-gray-200 dark:border-gray-700 shadow-lg backdrop-blur-sm transition duration-300 hover:shadow-xl hover:-translate-y-0.5">
-              <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">40+</div>
-              <div className="text-sm text-gray-600 dark:text-gray-300 text-center">AI-Powered Templates</div>
+              <div className="text-3xl font-bold bg-gradient-to-r from-indigo-600 to-indigo-400 bg-clip-text text-transparent">3</div>
+              <div className="text-sm text-gray-600 dark:text-gray-300 text-center">Industry Templates</div>
             </div>
           </div>
         </div>

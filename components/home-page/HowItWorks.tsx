@@ -10,7 +10,7 @@ const steps = [
       </svg>
     ),
     title: 'One-Click Setup',
-    description: 'Install Opptics and our AI immediately starts learning your product terminology and demo patterns.'
+    description: 'Install Opptics and start personalizing your demos in seconds with our pre-built templates.'
   },
   {
     number: 2,
@@ -19,8 +19,8 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'AI-Powered Personalization',
-    description: 'Our AI automatically detects your prospect&apos;s industry and role, suggesting optimal terminology and demo paths.'
+    title: 'Smart Personalization',
+    description: 'Choose from our industry-specific templates or create your own custom terminology mappings.'
   },
   {
     number: 3,
@@ -29,21 +29,24 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
       </svg>
     ),
-    title: 'Real-Time Intelligence',
-    description: 'Get live competitive insights and positioning recommendations during your demo.'
+    title: 'Real-Time Updates',
+    description: 'See your personalized terminology instantly applied across your entire demo environment.'
   }
 ] as const; // Make the array immutable
 
 export default function HowItWorks() {
   return (
-    <section className="py-24 md:py-32">
+    <section id="how-it-works" className="py-24 md:py-32 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-600 via-indigo-500 to-indigo-400 bg-clip-text text-transparent mb-4">
             How It Works
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-300">
-            Get started in minutes with our intelligent demo personalization
+            Simple setup, powerful results
+            <span className="ml-2 inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200">
+              AI Features Coming Soon
+            </span>
           </p>
         </div>
 
