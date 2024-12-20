@@ -32,8 +32,8 @@ declare namespace __next_route_internal_types__ {
     | `/`
     | `/marketing-page`
     | `/api/auth/webhook`
-    | `/api/payments/webhook`
     | `/api/payments/create-checkout-session`
+    | `/api/payments/webhook`
     | `/cancel`
     | `/dashboard`
     | `/dashboard/finance`

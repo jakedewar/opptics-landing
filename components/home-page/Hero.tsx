@@ -7,8 +7,6 @@ import { VideoPlayer } from "@/components/video-player"
 import { useState } from "react"
 
 export default function Hero() {
-  const [showVideo, setShowVideo] = useState(false);
-
   return (
     <section className="relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
@@ -37,16 +35,25 @@ export default function Hero() {
                   </svg>
                   Download Extension
                 </Link>
-                <button 
-                  onClick={() => setShowVideo(true)}
+                <Link 
+                  href="#features"
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-lg font-medium text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
                 >
-                  Watch Demo
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                  Learn More
+                  <svg 
+                    className="w-5 h-5" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path 
+                      strokeLinecap="round" 
+                      strokeLinejoin="round" 
+                      strokeWidth="2" 
+                      d="M12 5v14m0 0l-6-6m6 6l6-6"
+                    />
                   </svg>
-                </button>
+                </Link>
               </div>
               
               {/* Added: Quick Benefits List */}
@@ -124,15 +131,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <Dialog open={showVideo} onOpenChange={setShowVideo}>
-        <DialogContent className="sm:max-w-[900px]">
-          <DialogTitle className="sr-only">
-            Product Demo Video
-          </DialogTitle>
-          <VideoPlayer videoSrc="https://utfs.io/f/08b0a37f-afd7-4623-b5cc-e85184528fce-1f02.mp4" />
-        </DialogContent>
-      </Dialog>
 
       {/* Updated social proof section */}
       <section className="py-12 px-4 md:px-8 w-full bg-gray-50/50 dark:bg-gray-900/50 backdrop-blur-sm border-y border-gray-200 dark:border-gray-800">
